@@ -83,11 +83,16 @@
    </div>
   <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header">
-             <h5 id="offcanvasRightLabel"> Ayuda</h5>
+             <h5 id="offcanvasRightLabel">
+               <svg class="bi" width="18" height="18" fill="currentColor">
+                   <use xlink:href="main/icons/bootstrap-icons.svg#question-circle-fill"/>
+               </svg> Ayuda</h5>
              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <p class="text-justify">Para ingresar a la plataforma por favor ingresa el usuario y password si aun no tienes cuenta por favor registrate.</p>
+          <p class="text-justify">
+            Para ingresar a la plataforma por favor ingresa el usuario y password si aun no tienes cuenta por favor registrate.
+          </p>
         </div>
   </div>
   <script src="js/bootstrap.min.js"></script>
