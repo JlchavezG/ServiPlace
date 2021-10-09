@@ -26,15 +26,17 @@
       <div class="row justify-content-center h-100">
          <div class="col-sm-8 col-md-6 col-lg-6 rounded">
              <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12">
-                      <form class="" action="index.html" method="post">
+                <div class="col-sm-10 col-md-12 col-lg-12">
+                      <form class="needs-validation" novalidate action="/procesar" method="post">
                         <div class="input-group mb-3">
-                           <span class="input-group-text" id="basic-addon1">
+                           <span class="input-group-text" id="perfil">
                              <svg class="bi" width="15" height="15" fill="currentColor">
                                  <use xlink:href="main/icons/bootstrap-icons.svg#person-fill"/>
                              </svg>
                            </span>
-                           <input type="text" class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1">
+                           <input type="text" class="form-control" placeholder="Usuario" aria-label="Username" aria-describedby="basic-addon1" required>
+                           <div class="valid-feedback"> Usuario Ok</div>
+                           <div class="invalid-feedback"> Por favor ingresa tu Usuario</div>
                         </div>
                         <div class="input-group mb-3">
                            <span class="input-group-text" id="basic-addon1">
@@ -42,10 +44,12 @@
                                  <use xlink:href="main/icons/bootstrap-icons.svg#lock-fill"/>
                              </svg>
                            </span>
-                           <input type="password" class="form-control" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
+                           <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required>
+                           <div class="valid-feedback"> Se ingreso un Password</div>
+                           <div class="invalid-feedback"> Por favor ingresa tu Password</div>
                         </div>
                         <div class="d-grid gap-2">
-                            <button class="btn btn-primary btn-sm" type="button"> Ingresar</button>
+                            <button class="btn btn-primary btn-sm" type="submit"> Ingresar</button>
                         </div>
                       </form>
                 </div>
@@ -95,6 +99,29 @@
           </p>
         </div>
   </div>
+  <script type="text/javascript">
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+(function () {
+'use strict'
+
+// Fetch all the forms we want to apply custom Bootstrap validation styles to
+var forms = document.querySelectorAll('.needs-validation')
+
+// Loop over them and prevent submission
+Array.prototype.slice.call(forms)
+  .forEach(function (form) {
+    form.addEventListener('submit', function (event) {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+  </script>
+  <script src="js/bootstrap.bundle.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/popper.min.js"></script>
   <script src="js/dark-mode.js"></script>
